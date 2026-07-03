@@ -3,184 +3,252 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>강남현 Portfolio</title>
+    <title>강남현 · Developer Portfolio</title>
     <meta
       name="description"
-      content="임베디드/장비 SW 경험을 바탕으로 AI 업무 자동화, FastAPI, Flutter local-first 앱을 만드는 개발자 강남현의 포트폴리오"
+      content="장비 SW 경험을 바탕으로 업무 자동화, AI workflow, local-first 앱을 구현하는 강남현의 포트폴리오"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#top">강남현</a>
-      <nav aria-label="주요 섹션">
-        <a href="#projects">Projects</a>
+    <header class="topbar">
+      <a class="name" href="#top">강남현</a>
+      <nav aria-label="Portfolio navigation">
+        <a href="#case-files">Case Files</a>
+        <a href="#proof">Proof</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main id="top">
-      <section class="intro">
-        <div class="intro-copy">
-          <p class="eyebrow">Embedded · Automation · AI Workflow</p>
-          <h1>현장 장비와 반복 업무를 이해하고, 자동화 가능한 도구로 구현합니다.</h1>
-          <p class="lead">
-            C/C++, RTOS, Linux 기반 장비 SW 경험을 바탕으로 Python, FastAPI, Flutter,
-            AI 도구를 활용해 업무 자동화와 운영 도구를 만듭니다.
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="kicker">Embedded SW · Workflow Automation · AI-assisted Tools</p>
+          <h1>장비 개발 경험 위에, 반복 업무를 줄이는 도구를 만듭니다.</h1>
+          <p class="summary">
+            C/C++, RTOS, Linux 기반 센서/장비 SW를 개발했고, 최근에는 Python/FastAPI,
+            Flutter, Codex CLI를 활용해 업무 자동화와 제품형 도구를 만들고 있습니다.
+            화려한 데모보다 검증 가능한 실행 흐름, 문서, 테스트를 남기는 쪽을 선호합니다.
           </p>
-          <div class="intro-actions">
-            <a class="primary-link" href="#projects">프로젝트 보기</a>
-            <a class="secondary-link" href="./resume.md">이력서 초안</a>
+          <div class="link-row" aria-label="Primary links">
+            <a href="./resume.md">Resume</a>
+            <a href="./case-studies.md">Case studies</a>
+            <a href="https://github.com/rkdskagus123-ai">GitHub</a>
           </div>
         </div>
-        <div class="intro-panel" aria-label="핵심 역량 요약">
+
+        <aside class="facts" aria-label="Profile facts">
+          <dl>
+            <div>
+              <dt>현재</dt>
+              <dd>(주)벤탑스 · SW 개발</dd>
+            </div>
+            <div>
+              <dt>강점</dt>
+              <dd>장비 운영 맥락을 이해하는 자동화/도구 개발</dd>
+            </div>
+            <div>
+              <dt>주요 스택</dt>
+              <dd>C/C++, Python, FastAPI, Flutter, Drift/SQLite, C#</dd>
+            </div>
+            <div>
+              <dt>AI 활용</dt>
+              <dd>요구사항 정리, 설계 검토, validation, 문서화</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="section" id="case-files">
+        <div class="section-title">
+          <p class="kicker">Case files</p>
+          <h2>대표 작업 4개</h2>
+          <p>프로젝트를 예쁘게 포장하기보다, 어떤 문제를 어떤 구조로 줄였는지 중심으로 정리했습니다.</p>
+        </div>
+
+        <article class="case-file">
+          <header>
+            <span class="case-no">01</span>
+            <div>
+              <p class="case-type">Python automation · work tool</p>
+              <h3>Redmine/GitLab 주간보고 자동화</h3>
+            </div>
+          </header>
+          <div class="case-grid">
+            <div>
+              <h4>문제</h4>
+              <p>매주 Redmine wiki 개인 섹션을 수동 작성하고, GitLab 커밋 이력을 별도로 확인해야 했습니다.</p>
+            </div>
+            <div>
+              <h4>구현</h4>
+              <p>Markdown outline을 wiki 본문으로 변환하고, 상태/날짜/진행률 누락을 게시 전에 검증하는 CLI를 만들었습니다.</p>
+            </div>
+            <div>
+              <h4>증거</h4>
+              <pre><code>python redmine_weekly_report.py --validate
+확인 질문 없음: 상태, 진행률, 날짜가 모두 채워져 있습니다.</code></pre>
+            </div>
+            <div>
+              <h4>기술</h4>
+              <p>Python, Redmine API, GitLab API, Markdown/CommonMark, PowerShell</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-file">
+          <header>
+            <span class="case-no">02</span>
+            <div>
+              <p class="case-type">AI-assisted product tool</p>
+              <h3>Exam Maker / Exam AI Analyzer</h3>
+            </div>
+          </header>
+          <div class="case-grid">
+            <div>
+              <h4>문제</h4>
+              <p>AI가 시험지 초안을 빠르게 만들 수는 있지만, 형식/정답 분포/중복 문항 검증이 따로 필요했습니다.</p>
+            </div>
+            <div>
+              <h4>구현</h4>
+              <p>Codex CLI 기반 생성 흐름, DOCX 출력, validation warning, FastAPI 분석 API와 OCR provider 경계를 구성했습니다.</p>
+            </div>
+            <div>
+              <h4>증거</h4>
+              <pre><code>scripts/e2e-smoke.mjs
+scripts/analyzer-pattern-summary.test.mjs
+scripts/analyzer-dry-run-smoke.mjs</code></pre>
+            </div>
+            <div>
+              <h4>기술</h4>
+              <p>Node.js, FastAPI, Pydantic, SQLite, Tesseract OCR, DOCX generation</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-file">
+          <header>
+            <span class="case-no">03</span>
+            <div>
+              <p class="case-type">Flutter · privacy-first app</p>
+              <h3>Smart Baby</h3>
+            </div>
+          </header>
+          <div class="case-grid">
+            <div>
+              <h4>문제</h4>
+              <p>육아 기록, 가족 공유, 사진/영상 분류는 민감정보와 권한, 불확실한 AI 판단을 함께 다뤄야 했습니다.</p>
+            </div>
+            <div>
+              <h4>구현</h4>
+              <p>care event, health record, album classification, family sharing, AI candidate/review state를 도메인 모델로 분리했습니다.</p>
+            </div>
+            <div>
+              <h4>증거</h4>
+              <pre><code>548 commits
+84 test or fixture related files
+WebRTC signaling experiment included</code></pre>
+            </div>
+            <div>
+              <h4>기술</h4>
+              <p>Flutter, Riverpod, Drift/SQLite, PocketBase, WebRTC, Cloudflare Worker</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-file">
+          <header>
+            <span class="case-no">04</span>
+            <div>
+              <p class="case-type">Flutter · local-first utility</p>
+              <h3>Jungdon / My Refrigerator</h3>
+            </div>
+          </header>
+          <div class="case-grid">
+            <div>
+              <h4>문제</h4>
+              <p>냉장고/수납장의 물건은 위치와 유통기한이 기억에 의존하기 쉽고, 입력이 불편하면 앱 사용이 유지되지 않습니다.</p>
+            </div>
+            <div>
+              <h4>구현</h4>
+              <p>물품 CRUD, 위치 트리, 검색, 유통기한 목록, 바코드 스캔, 제품명 조회를 local-first 구조로 구성했습니다.</p>
+            </div>
+            <div>
+              <h4>증거</h4>
+              <pre><code>49 commits
+78 test/smoke/spec related files
+barcode scanner + Open Food Facts flow</code></pre>
+            </div>
+            <div>
+              <h4>기술</h4>
+              <p>Flutter, Riverpod, go_router, Drift/SQLite, mobile_scanner, HTTP API</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section proof" id="proof">
+        <div class="section-title">
+          <p class="kicker">Proof ledger</p>
+          <h2>말보다 남은 흔적</h2>
+          <p>아직 실제 화면 캡처는 더 보강해야 합니다. 대신 현재 공개 가능한 코드/문서/검증 흔적을 먼저 정리했습니다.</p>
+        </div>
+        <div class="ledger">
           <div>
-            <span>01</span>
-            <strong>장비 SW</strong>
-            <p>RTOS, Linux, 센서 데이터, 장비 운영 UI</p>
+            <strong>Redmine helper</strong>
+            <span>validation, wiki body generation, API publish safety</span>
           </div>
           <div>
-            <span>02</span>
-            <strong>업무 자동화</strong>
-            <p>Python CLI, Redmine/GitLab API, validation</p>
+            <strong>Exam Analyzer</strong>
+            <span>521 commits, FastAPI, OCR providers, synthetic fixtures</span>
           </div>
           <div>
-            <span>03</span>
-            <strong>AI Workflow</strong>
-            <p>Codex CLI, OCR, 문서 생성, 검증 흐름</p>
+            <strong>Smart Baby</strong>
+            <span>548 commits, domain/repository/provider structure</span>
+          </div>
+          <div>
+            <strong>OCR Core</strong>
+            <span>provider-neutral OCR contracts, 46 test/fixture files</span>
           </div>
         </div>
       </section>
 
-      <section class="band muted" id="projects">
-        <div class="section-head">
-          <p class="eyebrow">Featured Projects</p>
-          <h2>문제 정의부터 검증 흐름까지 남긴 프로젝트</h2>
+      <section class="section" id="experience">
+        <div class="section-title">
+          <p class="kicker">Experience</p>
+          <h2>장비 SW에서 자동화 도구로 확장</h2>
         </div>
-
-        <article class="project-card">
-          <img src="./assets/redmine-preview.svg" alt="Redmine weekly report automation preview" />
-          <div class="project-copy">
-            <p class="project-type">Python Automation</p>
-            <h3>Redmine/GitLab 주간보고 자동화</h3>
-            <p>
-              업무 outline을 Redmine wiki 주간보고 형식으로 변환하고, 상태/진행률/날짜 누락을
-              검증하며, GitLab 커밋 이력을 보고 후보로 정리하는 자동화 도구입니다.
-            </p>
-            <ul>
-              <li>Markdown outline to wiki body</li>
-              <li>Redmine API publish flow with preview and validation</li>
-              <li>GitLab commit summary candidates</li>
-            </ul>
-            <p class="stack">Python · Redmine API · GitLab API · PowerShell</p>
-          </div>
-        </article>
-
-        <article class="project-card reverse">
-          <img src="./assets/exam-preview.svg" alt="Exam maker AI workflow preview" />
-          <div class="project-copy">
-            <p class="project-type">AI-Assisted Product Tool</p>
-            <h3>Exam Maker / Exam AI Analyzer</h3>
-            <p>
-              지문 입력부터 시험지 생성, 품질 검증, DOCX 출력, OCR 분석 구조까지 이어지는
-              AI-assisted 교육 도구입니다. 생성 결과를 바로 신뢰하지 않고 warning과 fixture로 검증합니다.
-            </p>
-            <ul>
-              <li>Local Codex CLI generation workflow</li>
-              <li>Validation warnings and retry loop</li>
-              <li>FastAPI analyzer with OCR provider boundaries</li>
-            </ul>
-            <p class="stack">Node.js · FastAPI · Tesseract OCR · DOCX · SQLite</p>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <img src="./assets/mobile-preview.svg" alt="Smart Baby app preview" />
-          <div class="project-copy">
-            <p class="project-type">Flutter Local-first App</p>
-            <h3>Smart Baby</h3>
-            <p>
-              육아 기록, 아이별 앨범, 가족 공유 권한, AI 후보 분류를 local-first 구조로 설계한
-              privacy-first Flutter 앱입니다.
-            </p>
-            <ul>
-              <li>Care event and health record models</li>
-              <li>Album classification and review state</li>
-              <li>WebRTC signaling experiment</li>
-            </ul>
-            <p class="stack">Flutter · Riverpod · Drift/SQLite · WebRTC · Cloudflare Worker</p>
-          </div>
-        </article>
-
-        <article class="project-card reverse">
-          <img src="./assets/inventory-preview.svg" alt="Jungdon inventory app preview" />
-          <div class="project-copy">
-            <p class="project-type">Flutter Utility App</p>
-            <h3>Jungdon / My Refrigerator</h3>
-            <p>
-              식재료, 조리 음식, 생활용품의 위치와 유통기한을 local-first로 관리하는 앱입니다.
-              바코드 스캔, 제품명 조회, 위치 트리, 유통기한 목록을 구현했습니다.
-            </p>
-            <ul>
-              <li>Inventory CRUD and location tree</li>
-              <li>Expiry-soon list and barcode lookup</li>
-              <li>Sync-ready Drift data model</li>
-            </ul>
-            <p class="stack">Flutter · Riverpod · Drift/SQLite · mobile_scanner · HTTP API</p>
-          </div>
-        </article>
-      </section>
-
-      <section class="band" id="experience">
-        <div class="section-head">
-          <p class="eyebrow">Experience</p>
-          <h2>장비 개발 경험 위에 자동화와 제품 도구를 확장했습니다.</h2>
-        </div>
-        <div class="timeline">
-          <div class="timeline-item">
+        <ol class="work-list">
+          <li>
             <span>2024.08 - 현재</span>
-            <h3>(주)벤탑스 · SW 개발</h3>
-            <p>
-              C++/RTOS 기반 TOF 센서 제어, Python/FastAPI 장비 운영 Web UI, C# 실시간 센서
-              데이터 시각화, Redmine/GitLab 업무 자동화를 개발했습니다.
-            </p>
-          </div>
-          <div class="timeline-item">
+            <strong>(주)벤탑스 · SW 개발</strong>
+            <p>C++/RTOS 센서 제어, Python/FastAPI 장비 운영 Web UI, C# 실시간 센서 데이터 시각화, Redmine/GitLab 업무 자동화.</p>
+          </li>
+          <li>
             <span>2021.04 - 2023.09</span>
-            <h3>(주)와이노피아테크 · SW 개발</h3>
-            <p>
-              Linux STB 환경에서 Java/C++ 기반 TR-069 서비스 모듈을 구현하고, 기존 Java 구조를
-              유지보수 가능한 객체지향 구조로 재정리했습니다.
-            </p>
-          </div>
-          <div class="timeline-item">
+            <strong>(주)와이노피아테크 · SW 개발</strong>
+            <p>Linux STB 환경의 Java/C++ TR-069 서비스 모듈과 원격 설정/파라미터 관리 기능.</p>
+          </li>
+          <li>
             <span>2020.05 - 2020.09</span>
-            <h3>(주)포스로직 · SW 개발</h3>
-            <p>C++ 기반 기하 연산, 폴리곤 교차, 영상 처리 보조 알고리즘을 구현했습니다.</p>
-          </div>
-        </div>
+            <strong>(주)포스로직 · SW 개발</strong>
+            <p>C++ 기반 기하 연산, 폴리곤 교차, 영상 처리 보조 알고리즘.</p>
+          </li>
+        </ol>
       </section>
 
-      <section class="band muted compact">
-        <div class="section-head">
-          <p class="eyebrow">Working Style</p>
-          <h2>AI 결과물은 검증 가능한 workflow 안에서 다룹니다.</h2>
+      <section class="section next">
+        <div class="section-title">
+          <p class="kicker">Next evidence</p>
+          <h2>다음에 채울 것</h2>
+          <p>이 사이트는 첫 공개본입니다. 다음 단계는 실제 화면 캡처와 정량 수치를 채우는 것입니다.</p>
         </div>
-        <div class="principles">
-          <div>
-            <strong>문제 먼저</strong>
-            <p>프레임워크보다 반복되는 사용자 흐름과 실패 지점을 먼저 찾습니다.</p>
-          </div>
-          <div>
-            <strong>검증 가능한 AI</strong>
-            <p>AI 생성 결과는 warning, fixture, smoke test, review step으로 확인합니다.</p>
-          </div>
-          <div>
-            <strong>운영 가능한 문서</strong>
-            <p>README, runbook, validation command, known issue를 남기는 것을 선호합니다.</p>
-          </div>
-        </div>
+        <ul class="todo-list">
+          <li>Redmine 자동화 before/after 시간 수치</li>
+          <li>Exam Maker 실제 입력 화면과 DOCX 출력 캡처</li>
+          <li>Smart Baby/Jungdon demo data 기반 앱 스크린샷</li>
+          <li>지원 직무별 PDF 이력서 링크</li>
+        </ul>
       </section>
     </main>
 
@@ -190,7 +258,10 @@
         <p>Email: <span>이메일 입력</span></p>
         <p>GitHub: <a href="https://github.com/rkdskagus123-ai">github.com/rkdskagus123-ai</a></p>
       </div>
-      <a class="primary-link" href="./case-studies.md">케이스 스터디 보기</a>
+      <div class="footer-links">
+        <a href="./resume.md">Resume</a>
+        <a href="./case-studies.md">Case studies</a>
+      </div>
     </footer>
   </body>
 </html>
