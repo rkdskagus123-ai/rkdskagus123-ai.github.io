@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>강남현 Portfolio</title>
+    <meta
+      name="description"
+      content="임베디드/장비 SW 경험을 바탕으로 AI 업무 자동화, FastAPI, Flutter local-first 앱을 만드는 개발자 강남현의 포트폴리오"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top">강남현</a>
+      <nav aria-label="주요 섹션">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="intro">
+        <div class="intro-copy">
+          <p class="eyebrow">Embedded · Automation · AI Workflow</p>
+          <h1>현장 장비와 반복 업무를 이해하고, 자동화 가능한 도구로 구현합니다.</h1>
+          <p class="lead">
+            C/C++, RTOS, Linux 기반 장비 SW 경험을 바탕으로 Python, FastAPI, Flutter,
+            AI 도구를 활용해 업무 자동화와 운영 도구를 만듭니다.
+          </p>
+          <div class="intro-actions">
+            <a class="primary-link" href="#projects">프로젝트 보기</a>
+            <a class="secondary-link" href="./resume.md">이력서 초안</a>
+          </div>
+        </div>
+        <div class="intro-panel" aria-label="핵심 역량 요약">
+          <div>
+            <span>01</span>
+            <strong>장비 SW</strong>
+            <p>RTOS, Linux, 센서 데이터, 장비 운영 UI</p>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>업무 자동화</strong>
+            <p>Python CLI, Redmine/GitLab API, validation</p>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>AI Workflow</strong>
+            <p>Codex CLI, OCR, 문서 생성, 검증 흐름</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="band muted" id="projects">
+        <div class="section-head">
+          <p class="eyebrow">Featured Projects</p>
+          <h2>문제 정의부터 검증 흐름까지 남긴 프로젝트</h2>
+        </div>
+
+        <article class="project-card">
+          <img src="./assets/redmine-preview.svg" alt="Redmine weekly report automation preview" />
+          <div class="project-copy">
+            <p class="project-type">Python Automation</p>
+            <h3>Redmine/GitLab 주간보고 자동화</h3>
+            <p>
+              업무 outline을 Redmine wiki 주간보고 형식으로 변환하고, 상태/진행률/날짜 누락을
+              검증하며, GitLab 커밋 이력을 보고 후보로 정리하는 자동화 도구입니다.
+            </p>
+            <ul>
+              <li>Markdown outline to wiki body</li>
+              <li>Redmine API publish flow with preview and validation</li>
+              <li>GitLab commit summary candidates</li>
+            </ul>
+            <p class="stack">Python · Redmine API · GitLab API · PowerShell</p>
+          </div>
+        </article>
+
+        <article class="project-card reverse">
+          <img src="./assets/exam-preview.svg" alt="Exam maker AI workflow preview" />
+          <div class="project-copy">
+            <p class="project-type">AI-Assisted Product Tool</p>
+            <h3>Exam Maker / Exam AI Analyzer</h3>
+            <p>
+              지문 입력부터 시험지 생성, 품질 검증, DOCX 출력, OCR 분석 구조까지 이어지는
+              AI-assisted 교육 도구입니다. 생성 결과를 바로 신뢰하지 않고 warning과 fixture로 검증합니다.
+            </p>
+            <ul>
+              <li>Local Codex CLI generation workflow</li>
+              <li>Validation warnings and retry loop</li>
+              <li>FastAPI analyzer with OCR provider boundaries</li>
+            </ul>
+            <p class="stack">Node.js · FastAPI · Tesseract OCR · DOCX · SQLite</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="./assets/mobile-preview.svg" alt="Smart Baby app preview" />
+          <div class="project-copy">
+            <p class="project-type">Flutter Local-first App</p>
+            <h3>Smart Baby</h3>
+            <p>
+              육아 기록, 아이별 앨범, 가족 공유 권한, AI 후보 분류를 local-first 구조로 설계한
+              privacy-first Flutter 앱입니다.
+            </p>
+            <ul>
+              <li>Care event and health record models</li>
+              <li>Album classification and review state</li>
+              <li>WebRTC signaling experiment</li>
+            </ul>
+            <p class="stack">Flutter · Riverpod · Drift/SQLite · WebRTC · Cloudflare Worker</p>
+          </div>
+        </article>
+
+        <article class="project-card reverse">
+          <img src="./assets/inventory-preview.svg" alt="Jungdon inventory app preview" />
+          <div class="project-copy">
+            <p class="project-type">Flutter Utility App</p>
+            <h3>Jungdon / My Refrigerator</h3>
+            <p>
+              식재료, 조리 음식, 생활용품의 위치와 유통기한을 local-first로 관리하는 앱입니다.
+              바코드 스캔, 제품명 조회, 위치 트리, 유통기한 목록을 구현했습니다.
+            </p>
+            <ul>
+              <li>Inventory CRUD and location tree</li>
+              <li>Expiry-soon list and barcode lookup</li>
+              <li>Sync-ready Drift data model</li>
+            </ul>
+            <p class="stack">Flutter · Riverpod · Drift/SQLite · mobile_scanner · HTTP API</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="band" id="experience">
+        <div class="section-head">
+          <p class="eyebrow">Experience</p>
+          <h2>장비 개발 경험 위에 자동화와 제품 도구를 확장했습니다.</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span>2024.08 - 현재</span>
+            <h3>(주)벤탑스 · SW 개발</h3>
+            <p>
+              C++/RTOS 기반 TOF 센서 제어, Python/FastAPI 장비 운영 Web UI, C# 실시간 센서
+              데이터 시각화, Redmine/GitLab 업무 자동화를 개발했습니다.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <span>2021.04 - 2023.09</span>
+            <h3>(주)와이노피아테크 · SW 개발</h3>
+            <p>
+              Linux STB 환경에서 Java/C++ 기반 TR-069 서비스 모듈을 구현하고, 기존 Java 구조를
+              유지보수 가능한 객체지향 구조로 재정리했습니다.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <span>2020.05 - 2020.09</span>
+            <h3>(주)포스로직 · SW 개발</h3>
+            <p>C++ 기반 기하 연산, 폴리곤 교차, 영상 처리 보조 알고리즘을 구현했습니다.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="band muted compact">
+        <div class="section-head">
+          <p class="eyebrow">Working Style</p>
+          <h2>AI 결과물은 검증 가능한 workflow 안에서 다룹니다.</h2>
+        </div>
+        <div class="principles">
+          <div>
+            <strong>문제 먼저</strong>
+            <p>프레임워크보다 반복되는 사용자 흐름과 실패 지점을 먼저 찾습니다.</p>
+          </div>
+          <div>
+            <strong>검증 가능한 AI</strong>
+            <p>AI 생성 결과는 warning, fixture, smoke test, review step으로 확인합니다.</p>
+          </div>
+          <div>
+            <strong>운영 가능한 문서</strong>
+            <p>README, runbook, validation command, known issue를 남기는 것을 선호합니다.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <div>
+        <strong>Contact</strong>
+        <p>Email: <span>이메일 입력</span></p>
+        <p>GitHub: <a href="https://github.com/rkdskagus123-ai">github.com/rkdskagus123-ai</a></p>
+      </div>
+      <a class="primary-link" href="./case-studies.md">케이스 스터디 보기</a>
+    </footer>
+  </body>
+</html>
