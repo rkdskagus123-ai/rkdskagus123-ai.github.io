@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>강남현 · Case Studies</title>
+    <meta
+      name="description"
+      content="강남현 포트폴리오 대표 프로젝트 케이스 스터디"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="name" href="./index.html">강남현</a>
+      <nav aria-label="Case study navigation">
+        <a href="./resume.html">Resume</a>
+        <a href="./index.html#proof">Proof</a>
+        <a href="https://github.com/rkdskagus123-ai">GitHub</a>
+      </nav>
+    </header>
+
+    <main class="doc-page">
+      <section class="doc-hero">
+        <p class="kicker">Case studies</p>
+        <h1>대표 프로젝트 케이스 스터디</h1>
+        <p>
+          공개 가능한 범위에서 문제, 구현 방향, 검증 흔적을 정리했습니다. 사내 URL,
+          실데이터, 민감 정보는 제외하고 재현 가능한 구조와 판단 기준을 중심으로 썼습니다.
+        </p>
+      </section>
+
+      <article class="study">
+        <p class="case-no">01</p>
+        <h2>Redmine/GitLab 주간보고 자동화</h2>
+        <div class="study-grid">
+          <section>
+            <h3>Problem</h3>
+            <p>
+              매주 개인 업무 내용을 Redmine wiki 형식으로 정리하고 GitLab 커밋 이력을
+              별도로 확인해야 했습니다. 수동 작성은 날짜, 상태, 진행률 누락이 생기기 쉬웠고,
+              wiki 게시 후 수정 비용도 있었습니다.
+            </p>
+          </section>
+          <section>
+            <h3>Approach</h3>
+            <p>
+              보고서 원본은 Markdown outline으로 유지하고, Python CLI가 wiki 본문으로 변환하도록
+              했습니다. 게시 전 validation 단계에서 상태, 날짜, 진행률을 확인하고 API key는
+              환경변수로만 주입하도록 분리했습니다.
+            </p>
+          </section>
+          <section>
+            <h3>Evidence</h3>
+            <pre><code>python redmine_weekly_report.py --validate
+확인 질문 없음: 상태, 진행률, 날짜가 모두 채워져 있습니다.</code></pre>
+          </section>
+          <section>
+            <h3>Next Proof</h3>
+            <p>before/after 작성 시간, 샘플 outline, 샘플 output, 민감 정보 제거 스크린샷을 추가하면 가장 강한 대표 케이스가 됩니다.</p>
+          </section>
+        </div>
+      </article>
+
+      <article class="study">
+        <p class="case-no">02</p>
+        <h2>Exam Maker / Exam AI Analyzer</h2>
+        <div class="study-grid">
+          <section>
+            <h3>Problem</h3>
+            <p>
+              AI로 시험지 초안을 만들 수는 있지만, 중복 문항, 정답 분포, 난이도, DOCX 출력 형식은
+              별도의 검증 흐름이 필요했습니다. 실제 학생/교재 데이터는 테스트에 그대로 쓸 수 없었습니다.
+            </p>
+          </section>
+          <section>
+            <h3>Approach</h3>
+            <p>
+              Codex CLI 기반 생성 workflow를 preview, edit, JSON 검증, DOCX 출력 단계로 나눴습니다.
+              Analyzer는 FastAPI로 분리하고 OCR provider, report API, pattern summary API를 경계로 잡았습니다.
+            </p>
+          </section>
+          <section>
+            <h3>Evidence</h3>
+            <pre><code>scripts/e2e-smoke.mjs
+scripts/analyzer-pattern-summary.test.mjs
+scripts/analyzer-dry-run-smoke.mjs</code></pre>
+          </section>
+          <section>
+            <h3>Next Proof</h3>
+            <p>synthetic 지문, validation warning 화면, DOCX 출력 샘플, API smoke 결과를 공개용 데모로 묶으면 설득력이 커집니다.</p>
+          </section>
+        </div>
+      </article>
+
+      <article class="study">
+        <p class="case-no">03</p>
+        <h2>Smart Baby</h2>
+        <div class="study-grid">
+          <section>
+            <h3>Problem</h3>
+            <p>
+              영아 기록, 가족 공유, 사진/영상 분류는 민감 정보와 권한 문제가 함께 따라옵니다.
+              AI 분석 결과를 확정 판단처럼 보이게 만들면 사용자 신뢰와 안전에 문제가 생깁니다.
+            </p>
+          </section>
+          <section>
+            <h3>Approach</h3>
+            <p>
+              Flutter/Riverpod/Drift 기반으로 care event, health record, family sharing, album classification을
+              도메인 모델로 분리했습니다. AI 결과는 candidate와 review state를 따로 두어 불확실성을 표현했습니다.
+            </p>
+          </section>
+          <section>
+            <h3>Evidence</h3>
+            <pre><code>548 commits
+84 test or fixture related files
+WebRTC signaling experiment included</code></pre>
+          </section>
+          <section>
+            <h3>Next Proof</h3>
+            <p>실제 아이 사진 대신 데모 데이터를 만들고, 기능별 화면 캡처와 MVP/실험/후속 기능을 분리해 공개하면 좋습니다.</p>
+          </section>
+        </div>
+      </article>
+
+      <article class="study">
+        <p class="case-no">04</p>
+        <h2>Jungdon / My Refrigerator</h2>
+        <div class="study-grid">
+          <section>
+            <h3>Problem</h3>
+            <p>
+              냉장고와 수납장의 물건은 위치와 유통기한을 기억하기 어렵고, 입력이 번거로우면 앱을 계속 쓰기 어렵습니다.
+              로컬 우선 사용성과 향후 동기화 확장성 사이의 균형도 필요했습니다.
+            </p>
+          </section>
+          <section>
+            <h3>Approach</h3>
+            <p>
+              Flutter/Riverpod/Drift 기반 local-first 구조를 잡고 물품 CRUD, 위치 트리, 검색,
+              유통기한 목록, 바코드 스캔, Open Food Facts 제품명 조회 흐름을 구현했습니다.
+            </p>
+          </section>
+          <section>
+            <h3>Evidence</h3>
+            <pre><code>49 commits
+78 test/smoke/spec related files
+barcode scanner + Open Food Facts flow</code></pre>
+          </section>
+          <section>
+            <h3>Next Proof</h3>
+            <p>데모 재고 데이터, 핵심 화면 캡처, post-MVP 기능 구분, README 정리를 추가하면 생활형 앱 포트폴리오로 충분히 쓸 수 있습니다.</p>
+          </section>
+        </div>
+      </article>
+
+      <section class="doc-section note">
+        <h2>Publishing Rule</h2>
+        <p>
+          공개 포트폴리오에는 실제 고객명, 사내 URL, 장비 고유 정보, 실데이터를 넣지 않습니다.
+          대신 구조, 흐름, 검증 방식, 익명화된 샘플 결과를 보여주는 쪽이 더 안전하고 오래 갑니다.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
