@@ -1,6 +1,6 @@
 # Namhyun Kang Portfolio
 
-Static portfolio site for `rkdskagus123-ai.github.io`.
+Static portfolio site for `namhyunkang.github.io`.
 
 ## Contents
 

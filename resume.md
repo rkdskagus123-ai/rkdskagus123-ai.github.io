@@ -4,8 +4,8 @@ AI 업무 자동화 / 운영 도구 / 백엔드 개발자
 
 - Email: `rkdskagus123@gmail.com`
 - Phone: `PDF 이력서에 기재`
-- GitHub: `https://github.com/rkdskagus123-ai`
-- Portfolio: `https://rkdskagus123-ai.github.io/`
+- GitHub: [GitHub profile](https://github.com/namhyunkang)
+- Portfolio: [Web portfolio](https://namhyunkang.github.io/)
 
 ## Summary
 
