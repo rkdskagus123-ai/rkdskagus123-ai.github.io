@@ -2,10 +2,10 @@
 
 AI 업무 자동화 / 운영 도구 / 백엔드 개발자
 
-- Email: `이메일 입력`
-- Phone: `연락처 입력`
+- Email: `rkdskagus123@gmail.com`
+- Phone: `PDF 이력서에 기재`
 - GitHub: `https://github.com/rkdskagus123-ai`
-- Portfolio: `포트폴리오 링크 입력`
+- Portfolio: `https://rkdskagus123-ai.github.io/`
 
 ## Summary
 
