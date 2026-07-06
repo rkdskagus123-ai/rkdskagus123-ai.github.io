@@ -39,8 +39,9 @@
         <h2>Summary</h2>
         <p>
           센서, 장비 제어, Linux STB, 실시간 데이터 처리 경험을 바탕으로 운영자가 실제로
-          반복하는 일을 줄이는 도구를 설계합니다. 최근에는 Redmine/GitLab 주간보고 자동화,
-          AI 기반 시험지 생성/분석 도구, local-first Flutter 앱을 만들며 요구사항 정리,
+          반복하는 일을 줄이는 도구를 설계합니다. 최근에는 Redmine/GitLab 주간보고 자동화로
+          기록/작성까지 1시간 이상 걸리던 흐름을 10분 미만 리뷰 중심으로 줄였고,
+          개인 프로젝트로 AI 기반 시험지 생성/분석 도구와 local-first Flutter 앱을 만들며 요구사항 정리,
           검증 흐름, 테스트와 문서화를 함께 남기는 방식으로 개발하고 있습니다.
         </p>
       </section>
@@ -64,9 +65,10 @@
             <h3>(주)벤탑스 · SW 개발</h3>
             <ul>
               <li>C++/RTOS 기반 TOF 센서 및 FND 제어 로직을 구현하고 거리 측정, 상태 표시, 통신/예외 처리 흐름을 개선했습니다.</li>
-              <li>Python/FastAPI/JavaScript 기반 장비 운영 Web UI와 REST API를 개발해 기본 정보, 로그, 보안 설정, 상태 변경, FTP/CLI 제어 흐름을 제공했습니다.</li>
-              <li>C# Windows 앱에서 460,800 baud, 1ms 주기의 센서 데이터를 실시간 수신/파싱하도록 parser, circular buffer, queue 구조를 설계했습니다.</li>
-              <li>Redmine/GitLab 주간보고 자동화 CLI를 구현해 outline 작성, wiki 게시 전 검증, 커밋 히스토리 요약 흐름을 구성했습니다.</li>
+              <li>기존 Windows 프로그램 중심의 장비 설정 흐름을 Python/FastAPI/JavaScript 기반 Web UI와 REST API로 확장해 OS 의존성을 낮췄습니다.</li>
+              <li>C# Windows 앱에서 460,800 baud, 1ms 주기의 센서 데이터를 CSV 저장, 실시간 모니터링, 그래프 저장으로 확인하는 구조를 구현했습니다.</li>
+              <li>저사양 PC와 CPU 환경 차이에 따른 버벅임과 실행 순서 이슈를 줄이기 위해 수신/파싱/UI 갱신 흐름을 분리했습니다.</li>
+              <li>Redmine/GitLab 주간보고 자동화 CLI를 구현해 1시간 이상 걸리던 기록/보고 흐름을 10분 미만 리뷰 중심으로 줄였습니다.</li>
               <li>Claude/Codex 기반 코드 리뷰, 보안 리스크 점검, 문서화 흐름을 반복 업무에 적용했습니다.</li>
             </ul>
           </article>
@@ -111,15 +113,15 @@
           </article>
           <article>
             <h3>Exam Maker / Exam AI Analyzer</h3>
-            <p>Codex CLI 기반 시험지 생성, DOCX 출력, validation warning, FastAPI 분석 API와 OCR provider 경계를 구성했습니다.</p>
+            <p>개인 프로젝트로 Codex CLI 기반 시험지 생성, DOCX 출력, validation warning, FastAPI 분석 API와 OCR provider 경계를 구성했습니다.</p>
           </article>
           <article>
             <h3>Smart Baby</h3>
-            <p>Flutter/Riverpod/Drift 기반 영아 기록 앱에서 가족 공유, 앨범 분류, AI 후보/review state를 도메인 모델로 분리했습니다.</p>
+            <p>개인 프로젝트로 Flutter/Riverpod/Drift 기반 영아 기록 앱에서 가족 공유, 앨범 분류, AI 후보/review state를 도메인 모델로 분리했습니다.</p>
           </article>
           <article>
             <h3>Jungdon / My Refrigerator</h3>
-            <p>Flutter local-first 재고 관리 앱에서 물품 CRUD, 위치 트리, 유통기한 목록, 바코드 스캔, 제품명 조회 흐름을 구현했습니다.</p>
+            <p>개인 프로젝트로 Flutter local-first 재고 관리 앱에서 물품 CRUD, 위치 트리, 유통기한 목록, 바코드 스캔, 제품명 조회 흐름을 구현했습니다.</p>
           </article>
         </div>
       </section>
