@@ -47,7 +47,6 @@ C/C++, RTOS, Linux 기반 장비 SW 개발 경험을 바탕으로 Python, FastAP
 
 - C++ 기반 집합, 삼각형, 폴리곤, 타원 등 기하 정보 처리 로직을 구현했습니다.
 - Sphere-Sphere Volume, Polygon Intersection 등 기하 연산 계산 로직을 구현했습니다.
-- 메시/폴리곤 기반 알고리즘의 성능 개선과 이미지 프로세싱 효율화를 검토했습니다.
 
 ### 유니쎌(주) / 연구원
 
